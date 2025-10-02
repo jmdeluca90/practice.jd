@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace practice.jd.LeetCode
 {
-    public class Solution
+    public class LongestSubstring
     {
         public int LengthOfLongestSubstring(string s)
         {
