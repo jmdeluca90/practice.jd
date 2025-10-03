@@ -9,7 +9,7 @@ namespace practice.jd.LeetCode
 {
     public class SubtreeOfAnotherTree
     {
-        public bool IsSubtree(TreeNode root, TreeNode subRoot)
+        public bool IsSubtree(TreeNode? root, TreeNode? subRoot)
         {
             if (subRoot == null) return true;
             if (root == null) return false;
@@ -19,7 +19,7 @@ namespace practice.jd.LeetCode
             return IsSubtree(root.left, subRoot) || IsSubtree(root.right, subRoot);
 
         }
-        private bool IsIdentical(TreeNode root, TreeNode subRoot)
+        private bool IsIdentical(TreeNode? root, TreeNode? subRoot)
         {
             // if both are null then they are identical, shouldn't be null ever on first pass-through due to constraints
             if (root is null && subRoot is null) return true;

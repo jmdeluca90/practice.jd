@@ -1,9 +1,9 @@
-using Helpers;
+using practice.jd.Helpers;
 
 
 public class AddTwoNumbers
 {
-    public ListNode AddTwoNumbersSolution(ListNode l1, ListNode l2)
+    public ListNode? AddTwoNumbersSolution(ListNode? l1, ListNode? l2)
     {
         var dummyList = new ListNode(0);
         var tail = dummyList;
@@ -21,10 +21,9 @@ public class AddTwoNumbers
             tail.next = new ListNode(digit);
             tail = tail.next;
 
-            if (l1 != null) l1 = l1.next;
-            if (l2 != null) l2 = l2.next;
+            if (l1 != null) l1 = l1?.next;
+            if (l2 != null) l2 = l2?.next;
         }
         return dummyList.next;
-
     }
 }

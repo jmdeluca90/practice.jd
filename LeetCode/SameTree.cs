@@ -1,7 +1,7 @@
 using practice.jd.Helpers;
 public class SameTree
 {
-    public bool IsSameTree(TreeNode p, TreeNode q)
+    public bool IsSameTree(TreeNode? p, TreeNode? q)
     {
         // if both are null then return true
         if (p == null && q == null)

@@ -2,15 +2,15 @@ using practice.jd.Helpers;
 
 public class MaxDepthBTree
 {
-    public int MaxDepthRecursiveDFS(TreeNode root)
+    public int MaxDepthRecursiveDFS(TreeNode? root)
     {
         if (root == null)
         {
             return 0;
         }
 
-        var leftMaxDepth = MaxDepthRecursiveDFS(root.left);
-        var rightMaxDepth = MaxDepthRecursiveDFS(root.right);
+        var leftMaxDepth = MaxDepthRecursiveDFS(root?.left);
+        var rightMaxDepth = MaxDepthRecursiveDFS(root?.right);
 
         return 1 + Math.Max(leftMaxDepth, rightMaxDepth);
 
