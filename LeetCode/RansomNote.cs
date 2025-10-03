@@ -38,6 +38,25 @@ namespace practice.jd.LeetCode
                 }
             }
             return true;
+            // Quick fail: not enough letters
+            // if (ransomNote.Length > magazine.Length) return false;
+
+            // int[] counts = new int[26]; // for 'a' to 'z'
+
+            // Count letters in magazine
+            // foreach (char c in magazine) {
+            //     counts[c - 'a']++;
+            // }
+
+            // Try to "spend" letters for ransomNote
+            // foreach (char c in ransomNote) {
+            //     counts[c - 'a']--;
+            //     if (counts[c - 'a'] < 0) {
+            //         return false; // ran out of this letter
+            //     }
+            // }
+
+            // return true; // all letters covered
         }
     }
 }
