@@ -1,9 +1,10 @@
+using practice.jd.Helpers;
 using System;
 
 public class  DoublyLinkedList 
 {
-    public DoublyNode Head;
-    public DoublyNode Tail;
+    public DoublyNode? Head;
+    public DoublyNode? Tail;
 
     // Add a node to the end
     public void Append(int data)
@@ -45,19 +46,4 @@ public class  DoublyLinkedList
         }
         Console.WriteLine("null");
     }
-}
-
-public class DoublyNode
-{
-    public int Data;
-    public DoublyNode Next;
-    public DoublyNode Prev;
-
-    public DoublyNode(int data)
-    {
-        Data = data;
-        Next = null;
-        Prev = null;
-    }
-
 }

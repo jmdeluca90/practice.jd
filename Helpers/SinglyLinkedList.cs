@@ -1,4 +1,5 @@
-﻿using System;
+﻿using practice.jd.Helpers;
+using System;
 
 public class SinglyLinkedList
 {
@@ -22,18 +23,6 @@ public class SinglyLinkedList
         }
 
         current.Next = newNode;
-    }
-
-    public class Node
-    {
-        public int Data;
-        public Node Next;
-
-        public Node(int data)
-        {
-            Data = data;
-            Next = null;
-        }
     }
 
     // Print all nodes
