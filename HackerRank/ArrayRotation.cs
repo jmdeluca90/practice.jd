@@ -18,6 +18,7 @@ namespace practice.jd.HackerRank
             foreach (int q in queries)
             {
                 int og = (q - k + n) % n; // to find the original index we subtract k from the index position we're looking for, then add n, then modulo n
+                // to find the new index, we would do (i + k) % n where i is the original index
                 result.Add(a[og]);
             }
 
