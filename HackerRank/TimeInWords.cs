@@ -39,15 +39,28 @@ namespace practice.jd.HackerRank
                 dict[i] = "twenty " + dict[i - 20];
 
             if (m == 0)
+            {
                 return $"{dict[h]} o' clock"; // "hour" o' clock
+            }
             else if (m == 15 || m == 30)
+            {
                 return $"{dict[m]} past {dict[h]}";
+            }
             else if (m == 45)
+            {
                 return $"quarter to {dict[h + 1]}";
+            }
             else if (m <= 30)
-                return $"{dict[m]} minute{(m == 1 ? "" : "s")} past {dict[h]}"; // __ minutes "past" hour
+            {
+                string minuteWord = m == 1 ? "minute" : "minutes";
+                return $"{dict[m]} {minuteWord} past {dict[h]}"; // __ minutes "past" hour
+            }
             else
-                return $"{dict[60 - m]} minute{(60 - m == 1 ? "" : "s")} to {dict[h + 1]}"; // ___ minutes "to" hour       
+            {
+                int remainder = 60 - m;
+                string minuteWord = remainder == 1 ? "minute" : "minutes";
+                return $"{dict[remainder]} {minuteWord} to {dict[h + 1]}"; // ___ minutes "to" hour
+            }
         }
     }
 }
